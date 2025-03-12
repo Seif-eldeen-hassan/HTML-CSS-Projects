@@ -1,0 +1,107 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+html, body {
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(244, 38%, 16%);
+    height: 429px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* Text content */
+.text-content {
+    flex: 1;
+    padding: 40px;
+}
+
+h1 {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: hsl(277, 64%, 61%);
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Stats section */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.stat-item {
+    text-align: left;
+    margin-right: 40px;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Image container */
+.image-container {
+    position: relative; /* Ensures overlay stays within this container */
+    width: 100%;
+    max-width: 50%; /* Adjust width to match design */
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block; /* 🚀 FIX: Removes inline spacing */
+    width: 100%;
+    height: auto;
+}
+
+/* Purple overlay effect */
+.image-container::after {
+    content: "";  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    pointer-events: none; /* Ensures it does not interfere with interactions */
+}
